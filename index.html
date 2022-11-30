@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- MAIN CONTAINER  -->
+
+  <main class="main-container">
+
+    <!-- HEADING SECTION  -->
+
+    <section class="heading-section">
+      <div class="logo">
+        calc
+      </div>
+      <div class="theme-changer-container">
+        <h1 class="common-heading theme-name">theme</h1>
+        <div class="theme-slider-container">
+          <div class="slider-no">
+            <h1 class="common-heading slider-heading" onclick="go_to_1()">1</h1>
+            <h1 class="common-heading slider-heading" onclick="go_to_2()">2</h1>
+            <h1 class="common-heading slider-heading" onclick="go_to_3()">3</h1>
+          </div>
+          <div class="slider-container">
+            <div class="slider-btn"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISPLAY SECTION  -->
+
+    <section class="display-section">
+      <h1 class="calculated-number">0</h1>
+    </section>
+
+    <!-- KEYPAD SECTION  -->
+    
+    <section class="keypad-section">
+      <div class="keypad-buttons-container">
+        <div class="top-keys">
+          <button class="keys">7</button>
+          <button class="keys">8</button>
+          <button class="keys">9</button>
+          <button class="keys delete-btn" data-action="delete">del</button>
+          <button class="keys">4</button>
+          <button class="keys">5</button>
+          <button class="keys">6</button>
+          <button class="keys" data-action="add">+</button>
+          <button class="keys">1</button>
+          <button class="keys">2</button>
+          <button class="keys">3</button>
+          <button class="keys" data-action="subtract">-</button>
+          <button class="keys" data-action="decimal">.</button>
+          <button class="keys">0</button>
+          <button class="keys" data-action="divide">/</button>
+          <button class="keys" data-action="multiply">x</button>
+        </div>
+
+        <div class="bottom-keys">
+          <button class="reset-btn keys" data-action="reset">reset</button>
+          <button class="equal-btn keys" data-action="equal">=</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=League+Spartan:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+
+    /* Theme 1 */
+
+    /* #### Backgrounds */
+
+    --Very-dark-desaturated-blue-main-background: hsl(222, 26%, 31%);
+    --Very-dark-desaturated-blue-toggle-background-keypad-background: hsl(223, 31%, 20%);
+    --Very-dark-desaturated-blue-screen-background: hsl(224, 36%, 15%);
+
+    /* #### Keys */
+
+    --Desaturated-dark-blue-key-background: hsl(225, 21%, 49%);
+    --Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+    --Red-key-background-toggle: hsl(6, 63%, 50%);
+    --Dark-red-key-shadow: hsl(6, 70%, 34%);
+    --Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+    --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+
+    /* #### Text */
+
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+
+
+
+    /*     
+### Theme 2 */
+
+    /* 
+#### Backgrounds */
+
+    --Light-gray-main-background: hsl(0, 0%, 90%);
+    --Grayish-red-toggle-background-keypad-background: hsl(0, 5%, 81%);
+    --Very-light-gray-screen-background: hsl(0, 0%, 93%);
+
+    /* #-## Keys- */
+
+    --Dark-moderate-cyan-key-background: hsl(185, 42%, 37%);
+    --Very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+    --Orange-key-background-toggle: hsl(25, 98%, 40%);
+    --Dark-orange-key-shadow: hsl(25, 99%, 27%);
+    --Light-grayish-yellow-key-background: hsl(45, 7%, 89%);
+    --Dark-grayish-orange-key-shadow: hsl(35, 11%, 61%);
+
+    /* #-## Text */
+
+    --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    --White-text: hsl(0, 0%, 100%);
+
+
+
+
+    /* ### Theme 3 */
+
+    /* #### Backgrounds */
+
+    --Very-dark-violet-main-background: hsl(268, 75%, 9%);
+    --Very-dark-violet-toggle-background-keypad-background-screen-background: hsl(268, 71%, 12%);
+
+    /* #-## Keys- */
+
+    --Dark-violet-key-background: hsl(281, 89%, 26%);
+    --Vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+    --Pure-cyan-key-background-toggle: hsl(176, 100%, 44%);
+    --Soft-cyan-key-shadow: hsl(177, 92%, 70%);
+    --Very-dark-violet-key-background: hsl(268, 47%, 21%);
+    --Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+
+    /* #-## Text- */
+
+    --Light-yellow: hsl(52, 100%, 62%);
+    --Very-dark-blue: hsl(198, 20%, 13%);
+    --White-text: hsl(0, 0%, 100%);
+
+}
+
+body {
+    background-color: var(--Very-dark-desaturated-blue-main-background);
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* MAIN SECTION  */
+
+.main-container {
+    max-width: 54rem;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+/* HEADING SECTION  */
+
+.heading-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: var(--White);
+}
+
+.logo {
+    font-size: 3rem;
+}
+
+.theme-name {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-top: 2.8rem;
+    letter-spacing: 3px;
+}
+
+.theme-changer-container {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+.theme-slider-container {
+    position: relative;
+}
+
+.slider-no {
+    display: flex;
+    justify-content: space-around;
+    width: 7.5rem;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    z-index: 22;
+    cursor: pointer;
+}
+
+.slider-container {
+    width: 7.5rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    background-color: var(--Very-dark-desaturated-blue-toggle-background-keypad-background);
+    position: relative;
+    top: 2rem;
+    z-index: 2;
+}
+
+.slider-heading {
+    padding-bottom: 3rem;
+    width: 1.7rem;
+    font-size: 1.5rem;
+}
+
+.slider-btn {
+    width: 1.7rem;
+    height: 1.7rem;
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    background-color: var(--Red-key-background-toggle);
+    border-radius: 100%;
+}
+
+.slider-btn.horizTranslate2 {
+    transition: transform 0.1s linear;
+    transform: translateX(2.5rem);
+}
+
+.slider-btn.horizTranslate3 {
+    transition: transform 0.1s linear;
+    transform: translateX(4.8rem);
+}
+
+.slider-btn.horizTranslate1 {
+    transition: transform 0.1s linear;
+    transform: translateX(0rem);
+}
+
+/* DISPLAY SECTION  */
+
+.display-section {
+    width: 100%;
+    padding: 4rem;
+    background-color: var(--Very-dark-desaturated-blue-screen-background);
+    color: var(--White);
+    border-radius: 10px;
+}
+
+.calculated-number {
+    font-size: 5rem;
+    text-align: right;
+}
+
+/* KEYPAD SECTION  */
+
+.keypad-buttons-container {
+    background-color: var(--Very-dark-desaturated-blue-toggle-background-keypad-background);
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.top-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+
+}
+
+.keys {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 4rem;
+    height: 6rem;
+    color: var(--Very-dark-grayish-blue);
+    background-color: var(--Light-grayish-orange-key-background);
+    border: none;
+    box-shadow: 3px 4px var(--Grayish-orange-key-shadow);
+    border-radius: 10px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.delete-btn {
+    color: var(--White);
+    font-size: 3rem;
+    background-color: var(--Desaturated-dark-blue-key-background);
+    box-shadow: 3px 4px var(--Desaturated-dark-blue-key-shadow);
+}
+
+/* BOTTOM KEYS  */
+
+.bottom-keys {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
+    gap: 3rem;
+}
+
+.reset-btn {
+    color: var(--White);
+    font-size: 3rem;
+    background-color: var(--Desaturated-dark-blue-key-background);
+    box-shadow: 3px 4px var(--Desaturated-dark-blue-key-shadow);
+}
+
+.equal-btn {
+    color: var(--White);
+    font-size: 3rem;
+    background-color: var(--Red-key-background-toggle);
+    box-shadow: 3px 4px var(--Dark-red-key-shadow);
+}
+
+/* 2ND THEME */
+
+.theme_2 {
+    background-color: var(--Light-gray-main-background);
+}
+
+.theme_2 .heading-section {
+    color: var(--Very-dark-grayish-yellow);
+}
+
+.theme_2 .slider-container {
+    background-color: var(--Grayish-red-toggle-background-keypad-background);
+}
+
+.theme_2 .slider-btn {
+    background-color: var(--Orange-key-background-toggle);
+}
+
+.theme_2 .display-section {
+    background-color: var(--Very-light-gray-screen-background);
+    color: var(--Very-dark-grayish-yellow);
+}
+
+.theme_2 .keypad-buttons-container {
+    background-color: var(--Grayish-red-toggle-background-keypad-background);
+}
+
+.theme_2 .keys {
+    background-color: var(--Light-grayish-yellow-key-background);
+    color: var(--Very-dark-grayish-yellow);
+    box-shadow: 3px 4px var(--Dark-grayish-orange-key-shadow);
+}
+
+.theme_2 .delete-btn {
+    color: var(--White);
+    background-color: var(--Orange-key-background-toggle);
+    box-shadow: 3px 4px var(--Dark-orange-key-shadow);
+}
+
+.theme_2 .reset-btn {
+    color: var(--White);
+    background-color: var(--Dark-moderate-cyan-key-background);
+    box-shadow: 3px 4px var(--Very-dark-cyan-key-shadow);
+}
+
+.theme_2 .equal-btn {
+    color: var(--White);
+    background-color: var(--Orange-key-background-toggle);
+    box-shadow: 3px 4px var(--Dark-orange-key-shadow);
+}
+
+/* 3RD THEME  */
+
+
+.theme_3 {
+    background-color: var(--Very-dark-violet-main-background);
+}
+
+.theme_3 .heading-section {
+    color: var(--Light-yellow);
+}
+
+.theme_3 .slider-container {
+    background-color: var(--Very-dark-violet-toggle-background-keypad-background-screen-background);
+}
+
+.theme_3 .slider-btn {
+    background-color: var(--Pure-cyan-key-background-toggle);
+}
+
+.theme_3 .display-section {
+    background-color: var(--Very-dark-violet-toggle-background-keypad-background-screen-background);
+    color: var(--Light-yellow);
+}
+
+.theme_3 .keypad-buttons-container {
+    background-color: var(--Very-dark-violet-toggle-background-keypad-background-screen-background);
+}
+
+.theme_3 .keys {
+    background-color: var(--Very-dark-violet-key-background);
+    color: var(--Light-yellow);
+    box-shadow: 3px 4px var(--Dark-magenta-key-shadow);
+}
+
+.theme_3 .delete-btn {
+    color: var(--White);
+    background-color: var(--Dark-violet-key-background);
+    box-shadow: 3px 4px var(--Vivid-magenta-key-shadow);
+}
+
+.theme_3 .reset-btn {
+    color: var(--White);
+    background-color: var(--Dark-violet-key-background);
+    box-shadow: 3px 4px var(--Vivid-magenta-key-shadow);
+}
+
+.theme_3 .equal-btn {
+    color: var(--Very-dark-violet-toggle-background-keypad-background-screen-background);
+    background-color: var(--Pure-cyan-key-background-toggle);
+    box-shadow: 3px 4px var(--Soft-cyan-key-shadow);
+
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+/* MEDIA FOR TAB SCREENS  */
+
+@media screen and (max-width:768px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .main-container {
+        max-width: 45rem;
+    }
+}
+
+/* MEDIA FOR MOBILE SCREENS  */
+
+@media screen and (max-width:425px) {
+
+    html {
+        font-size: 48%;
+    }
+
+    .display-section {
+        padding: 3rem;
+    }
+
+    .main-container {
+        max-width: 40rem;
+        gap: 2.5rem;
+    }
+
+    .keypad-buttons-container {
+        padding: 2.5rem;
+    }
+
+    .top-keys {
+        gap: 2.5rem;
+    }
+
+    .keys {
+        font-size: 3.5rem;
+    }
+
+    .delete-btn,
+    .equal-btn,
+    .reset-btn {
+        font-size: 2.5rem;
+    }
+}
